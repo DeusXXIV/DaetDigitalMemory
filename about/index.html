@@ -16,16 +16,27 @@
             brandPrimary: '#865D36',
             brandSecondary: '#93785B',
             brandAccent: '#AC8968',
-            brandLight: '#A69080'
+            brandLight: '#A69080',
+            brandAccentLight: '#c4ac95'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-out forwards'
           }
         }
       }
     }
   </script>
+  
 </head>
-<body class="bg-brandLight text-brandDark">
+<body class="bg-brandLight text-brandDark" id="top">
   <!-- Navigation -->
-  <header class="bg-brandPrimary shadow-md">
+  <header class="bg-brandPrimary shadow-md fixed top-0 w-full z-20">
     <div class="container mx-auto flex items-center justify-between p-6">
       <div class="text-3xl font-bold text-white">About Daet</div>
       <ul class="flex space-x-6">
@@ -38,8 +49,8 @@
   </header>
 
   <!-- Main Content -->
-  <main class="container mx-auto p-8">
-    <div class="bg-brandSecondary rounded-lg shadow-lg p-8">
+  <main class="container mx-auto p-8 pt-24 animate-fadeIn">
+    <div class="bg-white rounded-lg shadow-lg p-8">
       <h2 class="text-2xl font-semibold mb-4">Discover Daet's History</h2>
       <p class="mb-6">
         Learn about the rich cultural heritage, historical milestones, and the vibrant community that makes Daet unique.
@@ -47,6 +58,12 @@
       <p class="mb-6">
         [Detailed content about Daet's history and culture will be added here...]
       </p>
+    </div>
+    <!-- Back to Top Button -->
+    <div class="mt-8 text-center">
+      <a href="#top" class="inline-block bg-brandPrimary hover:bg-brandDark text-white px-4 py-2 rounded shadow transition-transform transform hover:scale-105">
+        Back to Top
+      </a>
     </div>
   </main>
 
