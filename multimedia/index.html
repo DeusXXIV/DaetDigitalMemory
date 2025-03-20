@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Daet Digital Memory - Multimedia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Tailwind Custom Config (inline for now) -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandDark: '#3E362E',
+            brandPrimary: '#865D36',
+            brandSecondary: '#93785B',
+            brandAccent: '#AC8968',
+            brandLight: '#A69080',
+            brandAccentLight: '#c4ac95'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 1s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="flex flex-col min-h-screen bg-brandLight text-brandDark" id="top">
+  <!-- Navigation (Sticky) -->
+  <header class="bg-brandPrimary shadow-md fixed top-0 w-full z-20">
+    <div class="container mx-auto flex items-center justify-between p-6">
+      <div class="text-3xl font-bold text-white">Multimedia</div>
+      <ul class="flex space-x-6">
+        <li><a href="../index.html" class="text-white hover:text-brandAccent transition-colors">Home</a></li>
+        <li><a href="../timeline/index.html" class="text-white hover:text-brandAccent transition-colors">Timeline</a></li>
+        <li><a href="index.html" class="text-white hover:text-brandAccent transition-colors">Multimedia</a></li>
+        <li><a href="../about/index.html" class="text-white hover:text-brandAccent transition-colors">About</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto p-8 pt-24 animate-fadeIn">
+    
+    <!-- Example: 19th Century -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 border-b border-brandAccent pb-2">19th Century</h2>
+      
+      <!-- Example: 1880s (if content exists) -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">1880s</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Multimedia item example (clickable card) -->
+          <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+               onclick="openModal('../assets/images/1880s-photo1.jpg', '1880s photo 1', '1880s - Description of photo or video')">
+            <img src="../assets/images/1880s-photo1.jpg" alt="1880s photo 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <p class="text-sm">1880s - Description of photo or video</p>
+            </div>
+          </div>
+          <!-- Repeat multimedia items as needed -->
+        </div>
+      </div>
+      
+      <!-- Example: 1890s (if content exists) -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">1890s</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Multimedia item example (clickable card) -->
+          <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+               onclick="openModal('../assets/images/1890s-photo1.jpg', '1890s photo 1', '1890s - Description of photo or video')">
+            <img src="../assets/images/1890s-photo1.jpg" alt="1890s photo 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <p class="text-sm">1890s - Description of photo or video</p>
+            </div>
+          </div>
+          <!-- Additional items... -->
+        </div>
+      </div>
+    </section>
+    
+    <!-- Example: 20th Century -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 border-b border-brandAccent pb-2">20th Century</h2>
+      
+      <!-- Example: 1920s (if content exists) -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">1920s</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Multimedia item example (clickable card) -->
+          <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+               onclick="openModal('../assets/images/1920s-photo1.jpg', '1920s photo 1', '1920s - Description of photo or video')">
+            <img src="../assets/images/1920s-photo1.jpg" alt="1920s photo 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <p class="text-sm">1920s - Description of photo or video</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Example: 1960s (if content exists) -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">1960s</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Multimedia item example (clickable card) -->
+          <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+               onclick="openModal('../assets/images/1960s-photo1.jpg', '1960s photo 1', '1960s - Description of photo or video')">
+            <img src="../assets/images/1960s-photo1.jpg" alt="1960s photo 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <p class="text-sm">1960s - Description of photo or video</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Example: 21st Century -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 border-b border-brandAccent pb-2">21st Century</h2>
+      
+      <!-- Example: 2000s (if content exists) -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">2000s</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Multimedia item example (clickable card) -->
+          <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+               onclick="openModal('../assets/images/2000s-photo1.jpg', '2000s photo 1', '2000s - Description of photo or video')">
+            <img src="../assets/images/2000s-photo1.jpg" alt="2000s photo 1" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <p class="text-sm">2000s - Description of photo or video</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Example: 2010s (if content exists) -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-semibold mb-4">2010s</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <!-- Multimedia item example (clickable card) -->
+          <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+               onclick="openModal('/assets/images/Chowking-2016.jpg', '2016 Chowking', '2016 - Chowking Daet (Now Golden Baboy)')">
+            <img src="/assets/images/Chowking-2016.jpg" alt="2016 Chowking" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <p class="text-sm">2016 - Chowking Daet (Now Golden Baboy)</p>
+            </div>
+          </div>
+
+          <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+               onclick="openModal('/assets/images/SM-City-Daet-Construction-2019.jpg', 'SM City Daet Construction', '2019 - SM City Daet During Construction')">
+            <img src="/assets/images/SM-City-Daet-Construction-2019.jpg" alt="SM City Daet During Construction" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <p class="text-sm">2019 - SM City Daet During Construction</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bantayog ni Rizal Over The Years -->
+    <section class="mb-12">
+      <h2 class="text-3xl font-bold mb-6 border-b border-brandAccent pb-2">Bantayog ni Rizal: Over the Years</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <!-- Multimedia item example (clickable card) -->
+        <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+             onclick="openModal('/assets/images/Daet-Bantayog-ni-Rizal-1934.jpg', 'Bantayog 1934', '1934 - Bantayog ni Rizal')">
+          <img src="/assets/images/Daet-Bantayog-ni-Rizal-1934.jpg" alt="1934 Bantayog" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <p class="text-sm">1934 - Bantayog ni Rizal</p>
+          </div>
+        </div>
+        <!-- Multimedia item example (clickable card) -->
+        <div class="bg-brandAccentLight rounded-lg overflow-hidden shadow-lg cursor-pointer"
+             onclick="openModal('/assets/images/Daet-Bantayog-ni-Rizal-1949.jpg', 'Bantayog 1949', '1949 - Bantayog ni Rizal')">
+          <img src="/assets/images/Daet-Bantayog-ni-Rizal-1949.jpg" alt="1949 Bantayog" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <p class="text-sm">1949 - Bantayog ni Rizal</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Back to Top Button -->
+    <div class="mt-8 text-center">
+      <a href="#top" class="inline-block bg-brandPrimary hover:bg-brandDark text-white px-4 py-2 rounded shadow transition-transform transform hover:scale-105">
+        Back to Top
+      </a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-brandAccent py-4">
+    <div class="container mx-auto text-center text-sm text-white">
+      &copy; 2025 Daet Digital Memory. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Modal (hidden by default) -->
+  <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-30">
+    <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full overflow-auto">
+      <div class="flex justify-end p-2">
+        <button onclick="closeModal()" class="text-gray-600 hover:text-gray-800">&times;</button>
+      </div>
+      <div id="modal-content" class="p-4">
+        <!-- Modal content injected from modal.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Reference modal.js from the js folder -->
+  <script src="js/modal.js"></script>
+</body>
+</html>
